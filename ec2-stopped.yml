@@ -1,0 +1,21 @@
+policies:
+- name: EC2-Stopped-Instances
+  resource: ec2
+  filters:
+    - "State.Name": stopped
+  # mode:
+  #   type: periodic
+  #   schedule: "rate(4 minutes)"
+  #   timeout: 300
+  #   role: arn:aws:iam::105079498319:role/custodian-test
+  # actions:
+  #   - type: notify
+  #     template: default
+  #     subject: 'Listed EC2 Instances are in Stopped State'
+  #     to: 
+  #       - "{email1}"
+  #       - "{email2}"
+  #       - "{email3}"
+  #     transport:
+  #       type: sqs
+  #       queue: https://sqs.us-west-1.amazonaws.com/105079498319/test_queue_raghav
