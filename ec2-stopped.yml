@@ -2,7 +2,7 @@ policies:
 - name: EC2-Stopped-Instances
   resource: ec2
   filters:
-    - "State.Name": stopped
+    - "State.Name": running
   # mode:
   #   type: periodic
   #   schedule: "rate(4 minutes)"
